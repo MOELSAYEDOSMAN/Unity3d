@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622a9caea5fabdf41a13ebfe3525ed43, type: 3}
   m_Name: Packaxe
   m_EditorClassIdentifier: 
-  description: 
+  description: For cleaning rock obstacles.
   thumbnail: {fileID: 92410254, guid: a2167142ef8dd474e863c352cc256a86, type: 3}
   gameModel: {fileID: 0}
-  toolType: 0
+  toolType: 3

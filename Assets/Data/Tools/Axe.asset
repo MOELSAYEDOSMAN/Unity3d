@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622a9caea5fabdf41a13ebfe3525ed43, type: 3}
   m_Name: Axe
   m_EditorClassIdentifier: 
-  description: For tilling the land
+  description: For cleaning wood obstacles.
   thumbnail: {fileID: -1228273763, guid: a2167142ef8dd474e863c352cc256a86, type: 3}
   gameModel: {fileID: 0}
-  toolType: 0
+  toolType: 2

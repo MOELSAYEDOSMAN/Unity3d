@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\unity_game\\mohamed_hussam\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9BF1A7BD-B069-06A7-2398-B07E887FDC49}|Assembly-CSharp.csproj|f:\\unity_game\\mohamed_hussam\\assets\\scripts\\ui\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BF1A7BD-B069-06A7-2398-B07E887FDC49}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BF1A7BD-B069-06A7-2398-B07E887FDC49}|Assembly-CSharp.csproj|f:\\unity_game\\mohamed_hussam\\assets\\scripts\\time\\timemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BF1A7BD-B069-06A7-2398-B07E887FDC49}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\time\\timemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UIManager.cs",
+              "DocumentMoniker": "F:\\unity_game\\mohamed_hussam\\Assets\\Scripts\\UI\\UIManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIManager.cs",
+              "ToolTip": "F:\\unity_game\\mohamed_hussam\\Assets\\Scripts\\UI\\UIManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\UIManager.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T02:38:39.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TimeManager.cs",
+              "DocumentMoniker": "F:\\unity_game\\mohamed_hussam\\Assets\\Scripts\\Time\\TimeManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Time\\TimeManager.cs",
+              "ToolTip": "F:\\unity_game\\mohamed_hussam\\Assets\\Scripts\\Time\\TimeManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Time\\TimeManager.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAswAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T02:25:37.443Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

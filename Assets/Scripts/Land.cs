@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Land : MonoBehaviour
+public class Land : MonoBehaviour, ITimeTracker
 {
     public enum LandStatus
     {
@@ -13,6 +13,9 @@ public class Land : MonoBehaviour
 
     public Material soilMat, farmlandMat, wateredMat;
     new Renderer renderer;
+
+    //cache the time the land was watered
+    GameTimeStamp timeWatered;
 
     //The selection gameobject to enable when the player is selecting the land
     public GameObject select; 
@@ -28,6 +31,9 @@ public class Land : MonoBehaviour
 
         //Deselect the land by default
         Select(false);
+
+        //add this to TimeManager's Listener list
+        TimeManager.Instance.RegisterTracker(this);
     }
 
     public void SwitchLandStatus(LandStatus statusToSwitch)
@@ -52,6 +58,9 @@ public class Land : MonoBehaviour
             case LandStatus.Watered:
                 //Switch to watered material
                 materialToSwitch = wateredMat;
+
+                //cache the time it was watered
+                timeWatered = TimeManager.Instance.GetGameTimestamp();
                 break; 
 
         }
@@ -68,7 +77,45 @@ public class Land : MonoBehaviour
     //When the player presses the interact button while selecting this land
     public void Interact()
     {
-        //Interaction 
-        SwitchLandStatus(LandStatus.Farmland);
+        //check the player's tool slot
+        ItemData toolSlot = InventoryManager.Instance.equippedTool;
+
+        //try casting the itemdata in the toolslot as equipmentdata
+        EquipmentData equipmentTool = toolSlot as EquipmentData;
+
+        //check if it is of type equipmentdata
+        if(equipmentTool  != null)
+        {
+            //get the tool type
+            EquipmentData.ToolType toolType = equipmentTool.toolType;
+            
+            switch(toolType)
+            {
+                case EquipmentData.ToolType.Hoe:
+                    SwitchLandStatus(LandStatus.Farmland);
+                    break;
+
+                case EquipmentData.ToolType.WateringCan:
+                    SwitchLandStatus(LandStatus.Watered);
+                    break;
+            }
+        }
+    }
+
+    public void ClockUpdate(GameTimeStamp timestamp)
+    {
+        //checked if 24 hours has passed since last watered
+        if(landStatus == LandStatus.Watered)
+        {
+            //hours since the land was watered
+            int hoursElapsed = GameTimeStamp.CompareTimestamps(timeWatered, timestamp);
+            Debug.Log(hoursElapsed + " hours since this was watered");
+
+            if(hoursElapsed > 24)
+            {
+                //dry up (switch back to farmland)
+                SwitchLandStatus(LandStatus.Farmland);
+            }
+        }
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622a9caea5fabdf41a13ebfe3525ed43, type: 3}
   m_Name: watering can
   m_EditorClassIdentifier: 
-  description: 
+  description: For watering the plants to make them grow.
   thumbnail: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   gameModel: {fileID: 0}
-  toolType: 0
+  toolType: 1
